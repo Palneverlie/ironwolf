@@ -11,6 +11,7 @@ import logo from "@/assets/logo.png";
 import heroImg from "@/assets/hero-command.jpg";
 import vvipImg from "@/assets/vvip.jpg";
 import dashImg from "@/assets/dashboard.jpg";
+import HUMINT from "@/assets/HUMINT.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -52,7 +53,7 @@ function Nav() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all ${scrolled ? "bg-background/85 backdrop-blur-xl border-b border-border" : ""}`}>
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="HUMINT logo" width={40} height={40} className="h-10 w-10 object-contain drop-shadow-[0_0_8px_oklch(0.78_0.17_165_/_0.5)]" />
+          <img src={HUMINT} alt="HUMINT logo" width={56} height={56} className="h-14 w-14 object-contain scale-125 drop-shadow-[0_0_12px_oklch(0.78_0.17_165_/_0.55)]" />
           <div className="flex flex-col leading-none">
             <span className="font-mono-tac text-[10px] text-[color:var(--tactical-green)] tracking-[0.3em]">HUMINT</span>
           </div>
@@ -105,17 +106,35 @@ function Hero() {
             // CLASSIFIED · TACTICAL INTELLIGENCE SYSTEM
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] mb-6">
-            HUMINT <span className="text-[color:var(--tactical-green)] drop-shadow-[0_0_25px_oklch(0.78_0.17_165_/_0.6)]"></span>
-          </h1>
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+
+          {/* LOGO */}
+          <div className="flex justify-center lg:justify-start mb-6">
+            <img
+              src={HUMINT}
+              alt="HUMINT Logo"
+              className="w-full max-w-md md:max-w-xl object-contain drop-shadow-[0_0_35px_rgba(0,255,170,0.35)]"
+            />
+          </div>
+
+          {/* SUBTITLE */}
           <p className="text-xl md:text-2xl font-light tracking-wide text-foreground/90 mb-6 max-w-2xl">
-            Real-Time Field Intelligence &amp; Tactical Surveillance
+            Real-Time{" "}
+            <span className="text-[color:var(--tactical-cyan)]">
+              HUMINT
+            </span>{" "}
+            Field Intelligence & Tactical Surveillance
           </p>
+
+          {/* DESCRIPTION */}
           <p className="text-base text-muted-foreground max-w-2xl leading-relaxed mb-10">
-            A classified-grade intelligence platform engineered for live field operations — enabling
-            secure tactical streaming, real-time evidence collection, frontline operational monitoring,
-            and synchronized command visibility across every theater of operation.
+            A classified-grade intelligence platform engineered for live field
+            operations — enabling secure tactical streaming, real-time evidence
+            collection, frontline operational monitoring, and synchronized command
+            visibility across every theater of operation.
           </p>
+
+        </div>
 
           <div className="flex flex-wrap gap-4">
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@humint.solution&su=Request%20for%20Demo" className="group inline-flex items-center gap-3 bg-[color:var(--tactical-green)] text-[color:var(--primary-foreground)] px-7 py-4 font-mono-tac text-sm uppercase tracking-[0.2em] glow-green hover:bg-[color:var(--tactical-green)]/90 transition">
@@ -597,7 +616,7 @@ function Footer() {
         <div className="grid lg:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="HUMINT" width={56} height={56} loading="lazy" className="h-14 w-14 object-contain drop-shadow-[0_0_10px_oklch(0.78_0.17_165_/_0.5)]" />
+              <img src={HUMINT} alt="HUMINT" width={72} height={72} loading="lazy" className="h-18 w-18 object-contain scale-110 drop-shadow-[0_0_14px_oklch(0.78_0.17_165_/_0.55)]" />
               <div>
                 <div className="font-black text-xl uppercase tracking-wider">HUMINT</div>
                 <div className="font-mono-tac text-[10px] text-[color:var(--tactical-green)] tracking-[0.3em]">HUMINT FIELD INTELLIGENCE</div>
